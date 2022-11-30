@@ -1,0 +1,91 @@
+body { margin: 0; padding: 0; width: 100vw; max-height: 100vh; box-sizing: border-box;
+
+}
+
+.serif {font-family: kings-caslon,sans-serif;
+    font-weight: 400;
+    font-style: normal;}
+
+.serif-bold {
+    font-family: kings-caslon,sans-serif;
+font-weight: 700;
+font-style: normal;
+}
+
+.painted-letters {
+    font-family: cheap-pine-sans,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 62px;
+    line-height: 0;
+    text-transform: uppercase;
+    color: gold;
+    text-shadow: 2px 2px 0px black;
+    
+}
+
+.text-block {color: white;}
+
+#banner {height: 80px;  text-align: center; padding: 15px;
+    background-image: url('top.png'); background-size: 100% 90%; background-position: center center; background-repeat: no-repeat;
+}
+
+#banner .serif-bold {text-transform: uppercase; letter-spacing: 5px; color: white; text-shadow: -4px 2px 0px black; font-size: 48px;
+line-height: 48px;}
+
+#container { height: calc(100vh - 270px); display: flex; align-items: center; justify-content: center;
+    background-image: url('bg3.png'); background-size: cover;}
+#sidewalk {padding: 15px 25px;
+    background-image: url('sidewalk.png'); background-size: 100% 100%; background-position: 50% 100%; background-repeat: no-repeat;}
+#container section {width: 100%;  height: 100%;}
+
+.awning-container {width: 33vw;  position: absolute; background-image: url('awning.png'); background-size: 100% 100%; background-position: center center; background-repeat: no-repeat;}
+.awning {height: 150px; z-index: 20;
+text-align: center;}
+.window {height: calc(100% - 50px); width: 100%;   z-index: -100; margin-top: -80px;
+    background-image: url('window-glare.png'); background-size: 90% 95%; background-position: 50% 10%; background-repeat: no-repeat;}
+.window .text-block {margin: 18%; text-align: center;  padding-top: 15%; }
+
+.door {text-align: center; background-image: url('door.png'); background-size: 80% 90%; background-position: 50% 100%; background-repeat: no-repeat;}
+.door .text-block {margin-top: 100px; padding: 15%;}
+
+#shop-scene-container-1 {height: 80vh; margin-top: 50px; background-image: url('shop-scene-1.jpg'); background-position: center 16%; background-size: 85% 85%; background-repeat: no-repeat}
+
+#door-plaque {width: 100%;  text-align: center; padding: 10px 40px; width: 50%; margin: -100px 13% 0;
+background-image: url('plaquard.png'); background-size: contain; background-repeat: no-repeat; background-position: center center;}
+
+#door-plaque h3 {padding-top: 25px; margin-top: 40px; color: white;}
+
+.reviews:hover {transform: scale(1.1); cursor: pointer;}
+path {
+    fill: transparent;
+  }
+  
+  text {
+    
+    fill: white;
+    text-shadow: 2px 2px 0px black;
+  }
+
+
+.street-machine {
+    position: relative;
+    display: inline-flex; align-items: center;
+  }
+  
+  .street {
+    position: relative;
+    font-family: 'cheap-pine-sans', sans-serif;
+    font-size: 90px;
+    
+    -webkit-text-stroke: 0.1px black;
+    color: #fff;
+    text-shadow: -5px 5px 0px #ed2121;
+    text-shadow: -5px 5px 5px black;
+    margin: 0;
+  }
+  
+ 
+
+  
+  
