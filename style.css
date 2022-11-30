@@ -1,91 +1,85 @@
-body { margin: 0; padding: 0; width: 100vw; max-height: 100vh; box-sizing: border-box;
+@import url("https://p.typekit.net/p.css?s=1&k=xpg0dfc&ht=tk&f=9769.9770.9771.9772.28081.29357.29358.29359.29360.29361.29362.32109.32112.32115.49544.49548.49549&a=12755813&app=typekit&e=css");
+* {box-sizing: border-box; color: white;}
 
+body { margin: 0; box-sizing: border-box; background-image: url('assets/countryside.png'); background-size: 100% 100vh; background-repeat: no-repeat; }
+
+/* fonts */
+h1 {font-size: 2.5vw;}
+h2 {font-size: 28px;}
+h3 {font-size: 2.25vw;}
+a {text-decoration: none;}
+a:hover {text-decoration: underline; cursor: pointer}
+strong {color: inherit}
+
+@media only screen and (max-width: 700px) {
+    h1 {font-size: 3.5vw;}
+    #window-curve-text-left {transform: scale(1)}
 }
 
-.serif {font-family: kings-caslon,sans-serif;
-    font-weight: 400;
-    font-style: normal;}
+.text-shadow {text-shadow: 1px 1px 0px black;}
 
-.serif-bold {
-    font-family: kings-caslon,sans-serif;
-font-weight: 700;
-font-style: normal;
+
+/* Top Section - Sky & Hey Altoona / Johnstown Message */
+
+#sky { height: 80px; line-height: 50px; text-align: center; color: white; display: flex; align-items: center; justify-content: center;  background-size: 150% 120%; background-position: center bottom; background-repeat: no-repeat;  }
+.bouncy-text {font-family: 'calder-dark-grit', sans-serif; line-height: 52px;}
+.bold-bouncy-text {transform: scale(1.05); color: white!important; }
+.bouncy-text span { display:inline-block; color: white!important; text-shadow: 2px 2px black; }
+body:hover .bouncy-text span { animation:bounce .6s; }
+
+/* Trim with logo */
+#trim {height: 75px; min-width: 850px; width: 92%; padding: 0px 30px; text-align: center; display: flex; align-items: center; justify-content: center; background-image: url('assets/trim.png'); background-size: 101% 100px; background-position: center center; background-repeat: no-repeat; margin: 0 4%; }
+
+#trim h6 {display: flex; cursor: pointer; align-items: center; line-height: 18px; margin-top: 60px;
+     width: 100%;
+    font-family: "scrapbooker-little",sans-serif; color: black; font-size: 20px; color: tan; text-shadow: 1px 1px rgba(255, 255, 255, 0.5);}
+.stars {color: gold;  font-size: 14px;}
+.logo {margin: 20px 0 0 30px; max-height: 170px; transform:  translateX(-5px) }
+.logo:hover {cursor: pointer; transform: rotate(5deg);}
+
+/* building / storefront */
+
+#building {width: 90%; margin-left: 5%; min-width: 850px; background-image: url('assets/wall5.png'); background-size: 100% 100%;}
+#storefront { width: 100%; min-height: 400px; display: flex; align-items: center; justify-content: center; height: 70vh;  }
+.window {width: 40%; min-width: 350px; height: 100%;}
+
+.awning {height: 75px; width: 100%; text-align: center; display: flex; align-items: flex-end; line-height: 10px; justify-content: center; background-image: url('assets/awning2.png'); background-size: 100% 160%; background-repeat: no-repeat; background-position: center bottom;}
+.painted-letters {color: tan; text-shadow: 1px 1px 0px white; letter-spacing: 2px; margin-bottom: 25px; -webkit-text-stroke: 0.25px white; opacity: 0.8; font-family: "scrapbooker-little",sans-serif; }
+.clock-shelf { margin: -8px 0 0 3.5vw; padding-bottom: 15px; position: absolute; display: flex; align-items: flex-end; justify-content: center; background-size: 100% auto; background-position: center bottom;}
+
+.window-content { text-align: center; position: relative; width: 95%; padding: 0 10%; height: 85%; margin-top: -8px; background-image: url('assets/old-window.png'); background-size: 100% 100%; background-position: center center; background-repeat: no-repeat; }
+#window-curve-text-left {margin-top: 25px; transform: scale(1.25)}
+#window-curve-text-right {margin-top: 25px; transform: scale(1.35) translateX(5px) rotate(2deg); }
+.ornament-container {width: 100%; display: flex; align-items: center; justify-content: center; height: 50px; margin-top: -50px; margin-bottom: 20px;}
+.ornament-container img {height: 100%;  }
+
+.window-text-block-center {font-family: cheap-pine-sans, sans-serif; font-size: 28px; line-height: 30px; padding: 0px 20px; opacity: 1;}
+.gold-text-shadow {text-shadow: 0 0 1px black, 1px 0.5px 1px #5D3621, 0px 1px 1px #FDB846, 0px 2px 1px #DFBD75, 0px 0px 2px rgba(0,0,0,0.94); }
+.window-text-block-bottom {font-family: calder-dark-grit-shadow, sans-serif; padding: 0px 20px; line-height: 22px;}
+
+.doorframe {cursor: pointer; width: 20%; margin: 0px; min-width: 300px; height: 100%; display: flex; align-items: flex-end; justify-content: center; background-image: url('assets/doorframe.png'); background-size: 95% 95%; background-position: center bottom; background-repeat: no-repeat;}
+#door { width: 89%; height: 89%; padding: 10px 15px; background-image: url('assets/new-door2.png'); background-size: 100% 100%; background-position: center center; background-repeat: no-repeat;}
+.doorframe:hover #door {transform: perspective(550px) rotateY(-45deg) scale(0.80) translateY(-5px) translateX(45px); }
+#door-sign-message {color:black !important; font-size: 14px; line-height: 16px; font-weight: 700; font-family: calder-lc-grit, sans-serif; margin-top: 5px; margin-bottom: 25px; padding: 10px;}
+.door-sign { padding: 25px 10px 10px 10px; text-align: center; margin-top: 0px; transform: scale(0.85); background-image: url('assets/plaque.png'); background-size: 100% 100%; background-position: center center;}
+#door-prompt {background: white; padding: 10px; text-align: center; position: absolute; max-width: 20%; box-shadow: 2px 2px 3px black; display: none; margin-bottom: 50px;  }
+#door-prompt p {color: black; font-size: 14px; line-height: 16px; font-weight: 600;}
+
+
+/* Patio */
+
+#patio {position: absolute; margin-top: -30px; text-align: center;  display: flex; align-items: flex-end; padding: 0px 50px;
+background-image: url('assets/bush.png'); background-size: 150% 100px; background-repeat: no-repeat; background-position: center top;
 }
 
-.painted-letters {
-    font-family: cheap-pine-sans,sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 62px;
-    line-height: 0;
-    text-transform: uppercase;
-    color: gold;
-    text-shadow: 2px 2px 0px black;
-    
+#patio p {background-color: rgba(255, 255, 255, 0.75); padding: 15px 10px; border-radius: 3px; font-family: 'calder-dark-grit', sans-serif; font-size: 14px;}
+
+/* Animations */
+@keyframes bounce {
+    0%,100%{ transform:translate(0); }
+    25%{ transform:rotateX(20deg) translateY(2px) rotate(-3deg); }
+    50%{ transform:translateY(-20px) rotate(3deg) scale(1.1);  }
 }
-
-.text-block {color: white;}
-
-#banner {height: 80px;  text-align: center; padding: 15px;
-    background-image: url('top.png'); background-size: 100% 90%; background-position: center center; background-repeat: no-repeat;
-}
-
-#banner .serif-bold {text-transform: uppercase; letter-spacing: 5px; color: white; text-shadow: -4px 2px 0px black; font-size: 48px;
-line-height: 48px;}
-
-#container { height: calc(100vh - 270px); display: flex; align-items: center; justify-content: center;
-    background-image: url('bg3.png'); background-size: cover;}
-#sidewalk {padding: 15px 25px;
-    background-image: url('sidewalk.png'); background-size: 100% 100%; background-position: 50% 100%; background-repeat: no-repeat;}
-#container section {width: 100%;  height: 100%;}
-
-.awning-container {width: 33vw;  position: absolute; background-image: url('awning.png'); background-size: 100% 100%; background-position: center center; background-repeat: no-repeat;}
-.awning {height: 150px; z-index: 20;
-text-align: center;}
-.window {height: calc(100% - 50px); width: 100%;   z-index: -100; margin-top: -80px;
-    background-image: url('window-glare.png'); background-size: 90% 95%; background-position: 50% 10%; background-repeat: no-repeat;}
-.window .text-block {margin: 18%; text-align: center;  padding-top: 15%; }
-
-.door {text-align: center; background-image: url('door.png'); background-size: 80% 90%; background-position: 50% 100%; background-repeat: no-repeat;}
-.door .text-block {margin-top: 100px; padding: 15%;}
-
-#shop-scene-container-1 {height: 80vh; margin-top: 50px; background-image: url('shop-scene-1.jpg'); background-position: center 16%; background-size: 85% 85%; background-repeat: no-repeat}
-
-#door-plaque {width: 100%;  text-align: center; padding: 10px 40px; width: 50%; margin: -100px 13% 0;
-background-image: url('plaquard.png'); background-size: contain; background-repeat: no-repeat; background-position: center center;}
-
-#door-plaque h3 {padding-top: 25px; margin-top: 40px; color: white;}
-
-.reviews:hover {transform: scale(1.1); cursor: pointer;}
-path {
-    fill: transparent;
-  }
-  
-  text {
-    
-    fill: white;
-    text-shadow: 2px 2px 0px black;
-  }
-
-
-.street-machine {
-    position: relative;
-    display: inline-flex; align-items: center;
-  }
-  
-  .street {
-    position: relative;
-    font-family: 'cheap-pine-sans', sans-serif;
-    font-size: 90px;
-    
-    -webkit-text-stroke: 0.1px black;
-    color: #fff;
-    text-shadow: -5px 5px 0px #ed2121;
-    text-shadow: -5px 5px 5px black;
-    margin: 0;
-  }
-  
- 
-
-  
-  
+   
+.pulsate-bck{-webkit-animation:pulsate-bck .5s ease-in-out 5s both;animation:pulsate-bck .5s ease-in-out 5s both}
+ @-webkit-keyframes pulsate-bck{0%{-webkit-transform:scale(1);transform:scale(1)}50%{-webkit-transform:scale(.9);transform:scale(.9)}100%{-webkit-transform:scale(1);transform:scale(1)}}@keyframes pulsate-bck{0%{-webkit-transform:scale(1);transform:scale(1)}50%{-webkit-transform:scale(.9);transform:scale(.9)}100%{-webkit-transform:scale(1);transform:scale(1)}}
