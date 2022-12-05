@@ -51,7 +51,7 @@ strong {color: inherit}
 .awning {height: 75px; width: 100%; z-index: 2; display: flex; align-items: flex-end; justify-content: center; background-image: url('assets/new-awning.webp'); background-position: center center; background-repeat: no-repeat; background-size: 105% 100%;}
 .awning-text {display: flex; align-items: center; justify-content: center; width: 100%; height: 40px;}
 .window-pane {height: 100%; margin-top: -100px; width: 100%; position: absolute; background-image: url('assets/new-window.webp'); height: 100%; background-position: center center; background-repeat: no-repeat; background-size: 105% 90%;}
-.window-pane-content {margin: 100px 50px; height: 60%; text-align: center; padding: 2vh 1.75vw;  }
+.window-pane-content {margin: 100px 50px; height: 60%; text-align: center; padding: 2vh 2vw;  }
 .shelf {width: 85%; height: 50vh; margin: 0% 7.5% 0% 7.5%; position: absolute; display: flex; align-items: flex-end; bottom: 18%; background-color:rgba(0, 0, 0, 0.9)}
 
 .painted-letters {color: tan; text-shadow: 1px 1px 0px white; line-height: 0px; letter-spacing: 2px; -webkit-text-stroke: 0.25px white; opacity: 0.8; line-height: 20px!important; text-align: center;  font-family: "scrapbooker-little",sans-serif; }
@@ -91,3 +91,96 @@ svg { height: 10vh;}
     0%, 100%{ transform: rotate(-6deg);}
     50%{ transform: rotate(4deg); }
 }
+
+/*
+  --color-primary: #5192ED;
+  #F0544F: #F0544F;
+  --color-tertiary: ##F4807C;
+  --color-quaternary: #F7A4A1;
+  --color-quinary: #FCDBD9;
+  */
+
+  .text_shadows {
+    text-shadow: 3px 3px 0 #F0544F, 6px 6px 0 #F4807C,
+      9px 9px #F7A4A1, 12px 12px 0 #FCDBD9;
+    
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+
+    color: white;
+
+    animation: shadows 1.2s ease-in infinite, move 1.2s ease-in infinite;
+    letter-spacing: 0.4rem;
+  }
+
+  .bright-text {
+    font-weight: 900;
+    font-size: 22px!important;
+    color: #F0544F;
+    text-shadow: 1px 1px 0 white;
+  }
+
+@keyframes shadows {
+    0% {
+      text-shadow: none;
+    }
+    10% {
+      text-shadow: 3px 3px 0 #F0544F;
+    }
+    20% {
+      text-shadow: 3px 3px 0 #F0544F,
+        6px 6px 0 #F0544F;
+    }
+    30% {
+      text-shadow: 3px 3px 0 #F0544F,
+        6px 6px 0 #F0544F, 9px 9px #F7A4A1;
+    }
+    40% {
+      text-shadow: 3px 3px 0 #F0544F,
+        6px 6px 0 #F0544F, 9px 9px #F7A4A1,
+        12px 12px 0 #FCDBD9;
+    }
+    50% {
+      text-shadow: 3px 3px 0 #F0544F,
+        6px 6px 0 #F0544F, 9px 9px #F7A4A1,
+        12px 12px 0 #FCDBD9;
+    }
+    60% {
+      text-shadow: 3px 3px 0 #F0544F,
+        6px 6px 0 #F0544F, 9px 9px #F7A4A1,
+        12px 12px 0 #FCDBD9;
+    }
+    70% {
+      text-shadow: 3px 3px 0 #F0544F,
+        6px 6px 0 #F0544F, 9px 9px #F7A4A1;
+    }
+    80% {
+      text-shadow: 3px 3px 0 #F0544F,
+        6px 6px 0 #F0544F;
+    }
+    90% {
+      text-shadow: 3px 3px 0 #F0544F;
+    }
+    100% {
+      text-shadow: none;
+    }
+  }
+  
+  @keyframes move {
+    0% {
+      transform: translate(0px, 0px);
+    }
+    40% {
+      transform: translate(-12px, -12px);
+    }
+    50% {
+      transform: translate(-12px, -12px);
+    }
+    60% {
+      transform: translate(-12px, -12px);
+    }
+    100% {
+      transform: translate(0px, 0px);
+    }
+  }
