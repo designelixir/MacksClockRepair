@@ -1,0 +1,15 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} altoonaclockrepair\.com [NC]
+RewriteCond %{SERVER_PORT} 80
+RewriteRule ^(.*)$ https://altoonaclockrepair.com/$1 [R,L]
+Header set Content-Security-Policy "upgrade-insecure-requests" env=HTTPS
+
+RewriteBase /
+RewriteCond %{HTTP_USER_AGENT} (google|yahoo|msn|aol|bing)
+RewriteCond %{HTTP_HOST} altoonaclockrepair\.com$
+
+
+DirectoryIndex index.html
+Options Indexes
+AddHandler server-parsed .html
+
