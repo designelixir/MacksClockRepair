@@ -1,29 +1,17 @@
-@-moz-document domain("example.com") {
 
-    #spec-hack .fl-disable-interaction {
-    -webkit-user-select: all !important;
-    -moz-user-select: all !important;
-    -ms-user-select: all !important;
-    user-select: all !important;
-    pointer-events: all !important;
-    }
-    
-    #spec-hack .fl-transparent-facade {
-    display: inline !important;
-    position: static !important;
-    }
-    }
 * {box-sizing: border-box; color: white; position: relative;}
-html {height: 100vh; background: linear-gradient(to bottom, #9be2fe 0%,#67d1fb 100%);background-image: url('assets/yard-bg-sky.jpg'); background-size: cover; background-position: center bottom; background-repeat: no-repeat;}
-body { margin: 0;  top: 0;  box-sizing: border-box;   }
+html {background: linear-gradient(to bottom, #9be2fe 0%,#67d1fb 100%); overflow-x: hidden; background-image: url('assets/yard-bg-sky.webp'); background-size: cover; background-position: center 100%; background-repeat: no-repeat;  background-attachment: fixed;}
+body { margin: 0;  top: 0;  box-sizing: border-box; }
 
 /* fonts */
 h1 {font-size: 2vw;}
 h2 {font-size: 28px;}
-
 a {text-decoration: none;}
 a:hover {text-decoration: underline; cursor: pointer}
 strong {color: inherit}
+
+.text-shadow {text-shadow: 1px 1px 0px black;}
+.shadow {-webkit-filter: drop-shadow(-2px -3px 5px rgba(0, 0, 0, 0.6) );filter: drop-shadow(-2px -3px 5px rgba(0, 0, 0, 0.6));}
 
 @media only screen and (max-height: 750px) {
     h3 {font-size: 16px!important; line-height: 20px!important; margin-top: -15px;}
@@ -31,128 +19,67 @@ strong {color: inherit}
     p {font-size: 14px!important;}
     .plaque {margin-top: -75px;}
     #patio {margin-top: -10vh!important;}
-    .logo-container {height: 8vh!important;}
-  
 }
 
-
-
-.text-shadow {text-shadow: 1px 1px 0px black;}
-.shadow {
-    -webkit-filter: drop-shadow(-2px -3px 5px rgba(0, 0, 0, 0.6) );
-    filter: drop-shadow(-2px -3px 5px rgba(0, 0, 0, 0.6));
+@media only screen and (max-width: 900px) {
+    .introduction {background-size: 180% 90%!important;}
+    #structure {flex-wrap: wrap;  background-image: url('assets/house-texture.webp')!important; background-size: 100% 100%!important;}
+    #structure > div  {width: 100%!important; height: 100%;  }
+    
+    html {background-image: url('assets/house-texture.webp')}
+    #right-window {order: -1!important;}
+    #patio {margin-top: -10vh!important;}
+    svg {height: 15vh!important;}
 }
 
 
 /* Top Section - Sky & Hey Altoona / Johnstown Message */
-.introduction {height: 20vh; background-image: url('assets/roof-trimmed.png'); min-height: 185px; background-position: center bottom; background-repeat: no-repeat; background-size: 100% 75%; }
-.greeting {font: bold 36px 'calder-dark-grit', sans-serif; line-height: 0; }
-.subgreeting {font: bold 22px 'calder-dark-grit', sans-serif; line-height: 16px; margin-top: -10px; color: salmon;}
-#message p {background-color: rgba(255, 255, 255, 0.75); padding: 20px 10px; margin: 0px 50px; border-radius: 3px; font-family: 'calder-lc-grit', sans-serif;  text-align: center;   }
-#hey-container { text-align: center;}
-.logo-container {width: 100%; min-width: 950px; height: 14vh; z-index: 2; position: absolute; display: flex; align-items: center; justify-content: center; position: fixed; margin-top: -7vh}
-.logo-container img {height: 100%;}
+.introduction {background-image: url('assets/roof-trimmed.webp'); min-height: 185px; background-position: center bottom; background-repeat: no-repeat; background-size: 100% 75%; margin-top: -15px; }
+.greeting {font: bold 36px 'calder-dark-grit', sans-serif; line-height: 28px; text-align: center;  }
+#message {margin: -25px 50px 0px 50px;}
+#message p {background-color: rgba(255, 255, 255, 0.85); padding: 10px; border-radius: 5px; font-family: 'calder-lc-grit', sans-serif;  text-align: center;   }
+.logo-container {margin-top: -25px; margin-bottom: -25px; z-index: 2; width: 100%; display: flex; align-items: center; justify-content: center;}
+
+
 
 /* structure */
-#structure {display: inline-flex; align-items: flex-start; margin-top: -2px; justify-content: space-between;  width: 100%; height: 70vh; min-height: 500px;   background-image: url('assets/house-texture.png'); background-position: center center; background-repeat: no-repeat; background-size: 150% 105%;}
-.window {width: 32%; height: 100%;  min-width: 300px;}
-#left-window {background-image: url('assets/left-window-bg.png'); background-size: 85% 80%; background-position: center center; background-repeat: no-repeat;}
-#right-window {background-image: url('assets/right-window-bg.png'); background-size: 85% 80%; background-position: center center; background-repeat: no-repeat;}
+#structure {display: flex; align-items: flex-start; margin-top: -2px; justify-content: space-between;  width: 100%; height: 60vh; min-height: 500px;   background-image: url('assets/house-texture.webp'); background-position: center center; background-repeat: no-repeat; background-size: 150% 105%;}
+.window {width: 100%; height: 100%;  min-width: 300px;}
+#left-window {background-image: url('assets/left-window-bg.webp')!important; background-size: 85% 80%!important; background-position: center center; background-repeat: no-repeat;}
+#right-window {background-image: url('assets/right-window-bg.webp')!important; background-size: 85% 80% !important; background-position: center center; background-repeat: no-repeat;}
 
-.awning {height: 125px; width: 100%; z-index: 2; display: flex; align-items: flex-end; justify-content: center; background-image: url('assets/new-awning.png'); background-position: center center; background-repeat: no-repeat; background-size: 105% 100%;}
-.awning-text {display: flex; align-items: center; justify-content: center; width: 100%; height: 55px;}
-.window-pane {height: 100%; margin-top: -125px; width: 100%; position: absolute; background-image: url('assets/new-window.png'); height: 100%; background-position: center center; background-repeat: no-repeat; background-size: 105% 90%;}
-.window-pane-content {margin: 125px 50px; width: calc(100% - 100px); height: calc(100% - 225px); text-align: center; padding: 2vh 1.5vw;  }
-.shelf {width: 85%; margin: 0% 7.5% 22% 7.5%; position: absolute; height: calc(100% - 225px); display: flex; align-items: flex-end; bottom: 0; }
+.awning {height: 75px; width: 100%; z-index: 2; display: flex; align-items: flex-end; justify-content: center; background-image: url('assets/new-awning.webp'); background-position: center center; background-repeat: no-repeat; background-size: 105% 100%;}
+.awning-text {display: flex; align-items: center; justify-content: center; width: 100%; height: 40px;}
+.window-pane {height: 100%; margin-top: -100px; width: 100%; position: absolute; background-image: url('assets/new-window.webp'); height: 100%; background-position: center center; background-repeat: no-repeat; background-size: 105% 90%;}
+.window-pane-content {margin: 100px 50px; height: 60%; text-align: center; padding: 2vh 1.75vw;  }
+.shelf {width: 85%; height: 50vh; margin: 0% 7.5% 0% 7.5%; position: absolute; display: flex; align-items: flex-end; bottom: 18%; background-color:rgba(0, 0, 0, 0.9)}
+
 .painted-letters {color: tan; text-shadow: 1px 1px 0px white; line-height: 0px; letter-spacing: 2px; -webkit-text-stroke: 0.25px white; opacity: 0.8; line-height: 20px!important; text-align: center;  font-family: "scrapbooker-little",sans-serif; }
-svg {width: 20vw;}
-#window-curve-text-left { transform: scale(1.15)}
-#window-curve-text-right {margin-top: 25px; transform: scale(1.15) translateX(5px) rotate(2deg); }
+svg { height: 10vh;}
+
 .ornament-container {width: 100%; display: flex; align-items: center; justify-content: center; height: 7vh; margin-top: -6vh; margin-bottom: 20px;}
 .ornament-container img {height: 100%;  }
 .window-text-block-center {font-family: "big-caslon-fb", sans-serif; line-height: 26px;  }
 .gold-text-shadow {text-shadow: 0 0 1px black, 0.5px 0.5px 1px #5D3621, 0px 0.75px 0.75px #FDB846, 0px 1px 1px #DFBD75, 0px 0px 1px rgba(0,0,0,0.94); }
 .window-text-block-bottom {font-family: calder-dark-grit-shadow, sans-serif;  line-height: 22px;}
 
-.doorway {width: 30%; min-width: 300px; height: 100%; cursor: pointer; background-image: url('assets/doorframe-with-clocks.jpg'); height: 100%; background-position: center bottom; background-repeat: no-repeat; background-size: 100% 99%; display: flex; align-items: center; justify-content: center;}
-.door { width: 80%; height: 90%; margin-top: 8%; background-image: url('assets/new-door.png');  background-position: center 8%; background-repeat: no-repeat; background-size: 100% 100%; }
-.door-content {width: 100%; height: 100%; }
+/* doorway */
+.doorway {width: 30%; min-width: 300px; height: 100%; cursor: pointer; background-image: url('assets/doorframe-with-clocks.webp')!important; height: 100%; background-position: center bottom; background-repeat: no-repeat; background-size: 100% 99%; display: flex; align-items: center; justify-content: center;}
+.door { width: 80%; height: 90%; margin-top: 8%; background-image: url('assets/new-door.webp');  background-position: center 8%; background-repeat: no-repeat; background-size: 100% 100%; }
+.door-content {width: 100%; height: 100%;}
 .doorway:hover .door {transform: perspective(550px) rotateY(-45deg) scale(0.80) translateY(-5px) translateX(45px); }
-.open-sign-container {margin: 25px 50px 25px 50px;  width: calc(100% - 100px); height: 57%; display: flex; justify-content: center; }
-
-.open-sign-content {width: 100%; max-height: 200px;}
+.open-sign-container {margin: 25px 50px 25px 50px;  width: calc(100% - 75px); display: flex; justify-content: center; }
+.open-sign-content {width: 100%; max-height: 225px; }
 .open-sign-content p {font-size: 11px; text-align: center; color: black; font-family: calder-dark-grit, sans-serif}
+.plaque { padding: 15px 2vw 10px;  text-align: center; transform: scale(0.85); background-image: url('assets/plaque.webp'); background-size: 100% 100%; background-position: center center;}
+#door-sign-message {color:black !important; font-size: 14px; line-height: 16px; font-weight: 700; font-family: calder-lc-grit, sans-serif; padding: 10px;}
 
-.plaque { padding: 25px 2vw 10px; text-align: center; transform: scale(0.85); background-image: url('assets/plaque.png'); background-size: 100% 100%; background-position: center center;}
-
-
-#sky { border: 0.01px solid rgba(0,0,0,0); max-height: 180px; line-height: 50px; text-align: center; color: white;  background-size: 150% 120%; background-position: center bottom; background-repeat: no-repeat;  }
-/* .bouncy-text {font-family: 'calder-dark-grit', sans-serif; line-height: 52px;}
-.bold-bouncy-text {transform: scale(1.05); color: white!important; }
-.bouncy-text span { display:inline-block; color: white!important; text-shadow: 2px 2px black; }
-body:hover .bouncy-text span { animation:bounce .6s; } */
-.bouncy-text {
-    font-size:2em;
-    font:bold 48px 'calder-dark-grit', sans-serif;
-    user-select:none;
-    line-height: 52px;
-   
-   }
-
-   .bouncy-text h1 { display:inline-block; -webkit-text-stroke: 0.15px white;  color: salmon!important; text-shadow: 2px 2px white; }
-   
-   body:hover span { animation:bounce .6s; }
-   
-   @keyframes bounce {
-     0%,100%{ transform:translate(0); }
-     25%{ transform:rotateX(20deg) translateY(2px) rotate(-3deg); }
-     50%{ transform:translateY(-20px) rotate(3deg) scale(1.1);  }
-   }
-
-
-/* Trim with logo */
-#trim {height: 75px; min-width: 850px; width: 92%; padding: 0px 30px; text-align: center; display: flex; align-items: center; justify-content: center; background-image: url('assets/trim.png'); background-size: 101% 100px; background-position: center center; background-repeat: no-repeat; margin: 0 4%; }
-
-#trim h6 {display: flex; cursor: pointer; align-items: center; line-height: 18px; margin-top: 60px;
-     width: 100%;
-    font-family: "scrapbooker-little",sans-serif; color: black; font-size: 20px; color: tan; text-shadow: 1px 1px rgba(255, 255, 255, 0.5);}
-.stars {color: gold;  font-size: 14px;}
-.logo {margin: 20px 0 0 30px; max-height: 170px; transform:  translateX(-5px) }
-.logo:hover {cursor: pointer; transform: rotate(5deg);}
-
-/* building / storefront */
-
-#building {width: 100%; min-width: 850px; background-image: url('assets/new/house-texture.png'); background-size: 150% 100%;}
-#storefront { width: 100%; min-height: 400px; display: flex; align-items: center; justify-content: center; height: 70vh;  }
-
-
-
-.clock-shelf { margin: -8px 0 0 3.5vw; padding-bottom: 15px; position: absolute; display: flex; align-items: flex-end; justify-content: center; background-size: cover; background-position: center bottom;}
-
-.window-content { text-align: center; position: relative; width: 95%; padding: 0 10%; height: 85%; margin-top: -8px; background-image: url('assets/old-window.png'); background-size: 100% 100%; background-position: center center; background-repeat: no-repeat; }
-
-
-
-
-
-.doorframe {cursor: pointer; width: 20%; margin: 0px; min-width: 300px; height: 100%; display: flex; align-items: flex-end; justify-content: center; background-image: url('assets/doorframe.png'); background-size: 95% 95%; background-position: center bottom; background-repeat: no-repeat;}
-#door { width: 89%; height: 89%; padding: 10px 15px; background-image: url('assets/new-door2.png'); background-size: 100% 100%; background-position: center center; background-repeat: no-repeat;}
-
-#door-sign-message {color:black !important; font-size: 14px; line-height: 16px; font-weight: 700; font-family: calder-lc-grit, sans-serif; margin-top: 5px; margin-bottom: 25px; padding: 10px;}
-#door-prompt {background: white; padding: 10px; text-align: center; position: absolute; max-width: 20%; box-shadow: 2px 2px 3px black; display: none; margin-bottom: 50px;  }
-#door-prompt p {color: black; font-size: 14px; line-height: 16px; font-weight: 600;}
-
-#patio {width: 100%; height: 12vh; margin-top: -5vh; text-align: center; display: flex; align-items: center;  justify-content: center; background-image: url('assets/flowers_2.png'); background-size: 100% 100%; background-position: center center; background-repeat: no-repeat;}
+#patio {width: 100%; height: 12vh; margin-top: -5vh; text-align: center; display: flex; align-items: center;  justify-content: center; background-image: url('assets/flowers_2.webp'); background-size: 100% 100%; background-position: center center; background-repeat: no-repeat;}
 #patio a {background-color: rgba(255, 255, 255, 0.75); padding: 10px 10px; margin: 0px 50px; border-radius: 3px; font-family: 'calder-lc-grit', sans-serif; color: black; font-size: 16px; line-height: 20px; text-align: center;}
 #patio a:hover {transform: scale(1.05); cursor: pointer; text-decoration: none; }
 
 /* Animations */
-@keyframes bounce {
-    0%,100%{ transform:translate(0); }
-    25%{ transform:rotateX(20deg) translateY(2px) rotate(-3deg); }
-    50%{ transform:translateY(-20px) rotate(3deg) scale(1.1);  }
-}
-   
+
 .pulsate-bck{-webkit-animation:pulsate-bck .5s ease-in-out 5s both;animation:pulsate-bck .5s ease-in-out 5s both}
  @-webkit-keyframes pulsate-bck{0%{-webkit-transform:scale(1);transform:scale(1)}50%{-webkit-transform:scale(.9);transform:scale(.9)}100%{-webkit-transform:scale(1);transform:scale(1)}}@keyframes pulsate-bck{0%{-webkit-transform:scale(1);transform:scale(1)}50%{-webkit-transform:scale(.9);transform:scale(.9)}100%{-webkit-transform:scale(1);transform:scale(1)}}
 

@@ -9,6 +9,7 @@ RewriteCond %{HTTP_USER_AGENT} (google|yahoo|msn|aol|bing)
 RewriteCond %{HTTP_HOST} altoonaclockrepair\.com$
 
 
+
 DirectoryIndex index.html
 Options Indexes
 AddHandler server-parsed .html
